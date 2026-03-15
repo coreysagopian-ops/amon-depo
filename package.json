@@ -6,7 +6,7 @@
     "dev": "concurrently \"npm run server:dev\" \"npm run client:dev\"",
     "server:dev": "ts-node-dev --respawn --transpile-only src/server.ts",
     "client:dev": "vite --config vite.config.ts",
-    "build": "vite build --config vite.config.ts",
+    "build": "vite build --config vite.config.ts && tsc --project tsconfig.json",
     "start": "npm run build && node dist/server.js",
     "start:prod": "node dist/server.js"
   },
