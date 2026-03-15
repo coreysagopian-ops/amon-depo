@@ -1,0 +1,29 @@
+{
+  "name": "amon-demo",
+  "version": "1.0.0",
+  "description": "Amon — Agent Trust Infrastructure Demo",
+  "scripts": {
+    "dev": "concurrently \"npm run server:dev\" \"npm run client:dev\"",
+    "server:dev": "ts-node-dev --respawn --transpile-only src/server.ts",
+    "client:dev": "vite --config vite.config.ts",
+    "build": "vite build --config vite.config.ts",
+    "start": "npm run build && node dist/server.js",
+    "start:prod": "node dist/server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.11.0",
+    "@types/react": "^18.2.48",
+    "@types/react-dom": "^18.2.18",
+    "@vitejs/plugin-react": "^4.2.1",
+    "concurrently": "^8.2.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.11"
+  }
+}
